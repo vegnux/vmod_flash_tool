@@ -140,15 +140,15 @@ function adb_reboot() {
 function adb_clean_gaia() {
     echo "### Cleaning Gaia and Profiles ..."
     run_adb shell "rm -r /cache/*" &&
-    run_adb shell "rm -r /data/b2g/*" &&
-    run_adb shell "rm -r /data/local/storage/persistent/*" &&
-    run_adb shell "rm -r /data/local/svoperapps" &&
-    run_adb shell "rm -r /data/local/webapps" &&
-    run_adb shell "rm -r /data/local/user.js" &&
-    run_adb shell "rm -r /data/local/permissions.sqlite*" &&
-    run_adb shell "rm -r /data/local/OfflineCache" &&
-    run_adb shell "rm -r /data/local/indexedDB" &&
-    run_adb shell "rm -r /data/local/debug_info_trigger" &&
+    #run_adb shell "rm -r /data/b2g/*" &&
+    #run_adb shell "rm -r /data/local/storage/persistent/*" &&
+    #run_adb shell "rm -r /data/local/svoperapps" &&
+    #run_adb shell "rm -r /data/local/webapps" &&
+    #run_adb shell "rm -r /data/local/user.js" &&
+    #run_adb shell "rm -r /data/local/permissions.sqlite*" &&
+    #run_adb shell "rm -r /data/local/OfflineCache" &&
+    #run_adb shell "rm -r /data/local/indexedDB" &&
+    #run_adb shell "rm -r /data/local/debug_info_trigger" &&
     run_adb shell "rm -r /system/b2g/webapps" &&
     echo "### Cleaning Done."
 }
@@ -218,7 +218,7 @@ function unzip_file() {
 ## clean /system/media/ and extra gecko files
 function adb_clean_extra_gecko_files() {
     echo "### Cleaning Extra System Files ..."
-    run_adb shell "rm -r /system/media"
+    #run_adb shell "rm -r /system/media"
     echo "### Cleaning Done."
 
     echo "### Cleaning Extra Gecko Files ..."
